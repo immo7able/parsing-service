@@ -44,3 +44,8 @@ kotlin {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+tasks.bootJar {
+    mainClass.set("org.example.parsingservice.ParsingServiceApplicationKt")
+}
+

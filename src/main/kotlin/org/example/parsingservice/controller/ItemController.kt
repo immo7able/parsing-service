@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.*
 import java.math.BigDecimal
 
 @RestController
-@RequestMapping("/items")
+@RequestMapping("items")
 class ItemController(private val itemService: ItemService) {
 
-    @GetMapping("/{id}")
+    @GetMapping("{id}")
     fun findById(@PathVariable id: String): ItemDto? = itemService.findById(id)?.toDto()
 
-    @PostMapping("/{id}")
+    @PostMapping("{id}")
     fun updatePrice(
         @PathVariable id: String,
         @Positive(message = "Price should be greater than 0") @RequestParam price: BigDecimal
