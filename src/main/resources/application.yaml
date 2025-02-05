@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: parsing-service
+  data:
+    mongodb:
+      database: itemdb
+      uri: mongodb://localhost:27017/itemdb
+
+item:
+  updateRate: 1_800_000
